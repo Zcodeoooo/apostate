@@ -28,7 +28,7 @@ permissions:
 jobs:
   baseline:
     name: release baseline validation
-    runs-on: ubicloud-standard-16
+    runs-on: ubicloud-standard-2
     timeout-minutes: 10
     steps:
       - name: Check out source
