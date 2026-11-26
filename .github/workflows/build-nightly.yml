@@ -1,6 +1,9 @@
 name: nightly builds
 
 on:
+  push:
+    branches:
+      - "bisect/**"
   workflow_dispatch:
     inputs:
       targets:
