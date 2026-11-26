@@ -84,7 +84,7 @@ jobs:
       APOSTATE_FRESH_BUILD: "1"
       # The 0.75 default leaves headroom on a workstation someone is using; a
       # hosted runner is doing nothing else. Lower if linking OOMs.
-      APOSTATE_JOBS: ${{ inputs.target == 'macos-arm64' && '12' || '' }}
+      APOSTATE_JOBS: ${{ inputs.target == 'macos-arm64' && '12' || (inputs.target == 'linux-x64' && '16' || '') }}
     steps:
       - name: Initialize job workspace
         shell: bash
