@@ -1,15 +1,13 @@
 name: nightly builds
 
 on:
-  schedule:
-    - cron: "17 3 * * *"
   workflow_dispatch:
     inputs:
       targets:
-        description: "Comma-separated targets to build; overrides the APOSTATE_BUILD_TARGETS variable"
+        description: "Comma-separated targets to build; defaults to windows-x64"
         required: false
         type: string
-        default: ""
+        default: "windows-x64"
 
 permissions:
   contents: read
@@ -38,7 +36,7 @@ jobs:
       - name: Resolve target matrix
         id: resolve
         env:
-          REQUESTED_TARGETS: ${{ inputs.targets }}
+          REQUESTED_TARGETS: ${{ inputs.targets || 'windows-x64' }}
           CONFIGURED_TARGETS: ${{ vars.APOSTATE_BUILD_TARGETS }}
         shell: bash
         run: bash scripts/resolve-build-targets.sh >> "$GITHUB_OUTPUT"

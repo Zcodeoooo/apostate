@@ -14,10 +14,8 @@
 0011-base-icu-timezone-from-profile.patch
 0012-ui-color-scheme-and-highlight-from-profile.patch
 0013-accept-languages-from-profile.patch
-0014-headless-accept-languages.patch
 0015-content-pointer-hover-from-profile.patch
 0016-display-avail-origin.patch
-0017-blink-webbluetooth-on-linux.patch
 0018-display-color-gamut-and-hdr.patch
 0019-audio-hardware-buffer-from-profile.patch
 0020-media-device-counts-from-profile.patch
@@ -46,14 +44,11 @@
 0045-angle-point-size-clamp.patch
 0047-generic-font-preferences.patch
 0048-windows-font-stretch-suffix.patch
-0050-headless-fullscreen-bounds.patch
 0051-safe-software-webgpu-check.patch
 0052-swiftshader-parallel-shader-compile.patch
 0055-mac-arm-compressor-math.patch
 0056-profile-software-webgpu-admission.patch
 0057-angle-static-parallel-shader-tests.patch
-0059-mac-arm-oscillator-vector-math.patch
-0060-mac-arm-fft-multiply.patch
 0061-software-hevc-decoder.patch
 0063-validated-software-element-indices.patch
 0064-profile-webgpu-shared-image-staging.patch
@@ -94,8 +89,6 @@
 0085-per-field-fingerprint-overrides.patch
 
 0097-compose-assumes-font-provisioning.patch
-0099-font-enumeration-suffix-aware-matching.patch
-0100-blink-no-empty-root-window-rect.patch
 0101-compose-drops-the-absent-panel-origin.patch
 0102-compose-serves-a-hardware-gpu-identity.patch
 0103-gl-serve-the-claimed-limit-on-a-soft-backend.patch
@@ -103,8 +96,6 @@
 0105-webgpu-no-adapter-when-none-was-measured.patch
 0106-compose-credentials-are-not-a-device.patch
 0107-compose-tests-follow-the-persona-rule.patch
-0108-gl-keep-the-software-webgl-fallback.patch
-0109-software-hevc-on-every-shipped-target.patch
 0111-locale-follows-the-launch-and-the-host.patch
 
 # 0110 was appended after 0111; the two were added to the series together.
@@ -116,38 +107,16 @@
 0114-composed-locale-never-the-host-shell.patch
 0115-composed-locale-outranks-the-platform.patch
 0116-profile-extensions-axis.patch
-0118-webrtc-udp-families-follow-the-proxy.patch
 0119-gl-serve-the-anchor-limits-to-webgl-on-every-backend.patch
-0120-opt-in-profile-seeded-readback-noise.patch
-0121-extensions-serve-runtime-to-pages-from-the-profile.patch
-0125-speech-persona-voices-spoken-by-a-real-provider.patch
-0126-css-system-colours-follow-the-claimed-platform.patch
-0127-css-system-fonts-follow-the-claimed-platform.patch
-0128-fonts-system-ui-and-default-font-follow-the-claimed-platform.patch
-0129-content-barcodedetector-follows-the-claimed-platform.patch
-0130-audio-context-runs-at-48-khz-on-every-persona.patch
 0131-media-list-the-speakers-the-profile-claims.patch
-0132-media-power-efficient-follows-the-claimed-gpu.patch
 0133-keyboard-serve-the-claimed-platform-layout-map.patch
 0135-webgpu-serve-the-claimed-adapter-on-a-host-with-no-gpu.patch
 0136-webgpu-the-page-sees-the-claimed-adapter.patch
 0138-compose-claims-the-host-cpu-architecture.patch
-0139-widevine-loads-a-cdm-beside-the-executable.patch
-0140-mac-helper-signed-to-load-the-widevine-cdm.patch
-0141-media-name-the-communications-device-on-every-host.patch
 0142-webgpu-serve-the-two-float32-features-the-profile-claims.patch
-0143-fonts-windows-win-metrics.patch
-0144-fonts-windows-line-gap.patch
-0145-window-first-window-fills-the-claimed-work-area.patch
-0146-fonts-windows-family-aliases.patch
-0147-speech-persona-voices-without-a-host-engine.patch
 0148-locale-a-bare-tag-names-only-the-application-locale.patch
 0149-webgpu-subgroup-sizes-from-the-profile.patch
-0150-fonts-windows-emoji-and-symbol-fallback.patch
-0151-url-windows-profile-parses-file-paths-as-windows.patch
-0152-cpu-performance-tier-without-the-host-cpu-model.patch
 0153-compose-a-seed-keeps-its-machine-across-chrome-updates.patch
 0154-compose-the-gpu-cluster-follows-the-host-cpu-family.patch
 0155-webgpu-a-device-measured-without-an-adapter-has-none.patch
-0156-fonts-a-windows-persona-names-variable-font-instances.patch
 0157-webgpu-the-software-adapter-passes-155s-fallback-gate.patch

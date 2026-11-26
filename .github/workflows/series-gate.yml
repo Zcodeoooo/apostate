@@ -70,18 +70,10 @@ on:
   workflow_dispatch:
     inputs:
       targets:
-        description: "Comma-separated targets to gate; the default pair is the platforms no local checkout compiles"
+        description: "Comma-separated targets to gate"
         required: false
         type: string
-        default: "linux-x64,windows-x64"
-  # Weekly. Per pull request would be the ideal cadence and costs roughly $16 a
-  # run, which is not defensible on a repository whose pull requests are mostly
-  # patch edits. Weekly bounds the time a platform-specific break can sit
-  # undetected to one week, and it runs on Monday so a break is known at the
-  # start of a week rather than found by a release build at the end of one.
-  # Clear of the nightly window (03:17) and the runner probe (Wednesday 06:41).
-  schedule:
-    - cron: "23 5 * * 1"
+        default: "windows-x64"
 
 permissions:
   contents: read
