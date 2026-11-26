@@ -7,12 +7,14 @@
 # Real Chrome is an official build. Beyond size and speed, an unofficial build
 # differs observably — different optimisation, different symbol handling — which
 # makes it wrong under axiom A2 before we patch anything.
-# Bisect test speed optimization: disable official PGO/ThinLTO during bisection.
-# Restore `is_official_build = true` before final release builds.
-is_official_build = false
+# Bisect test speed optimization: keep is_official_build=true so Chromium's
+# developer-only raw-ptr clang plugin stays disabled, while turning off PGO,
+# ThinLTO, and CFI for fast linking. Restore defaults before final release.
+is_official_build = true
 is_debug = false
-use_thin_lto = false
 chrome_pgo_phase = 0
+use_thin_lto = false
+is_cfi = false
 
 # Official builds select chrome_pgo_phase = 2 automatically, and the profile is
 # pinned through DEPS. Do not disable PGO to shorten builds: the resulting
