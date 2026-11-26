@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       targets:
-        description: "Comma-separated targets to build; defaults to windows-x64"
+        description: "Comma-separated targets to build; defaults to linux-x64 (Ubicloud)"
         required: false
         type: string
-        default: "windows-x64"
+        default: "linux-x64"
 
 permissions:
   contents: read
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   setup:
     name: resolve available build targets
-    runs-on: ubuntu-24.04
+    runs-on: ubicloud-standard-16
     timeout-minutes: 10
     outputs:
       matrix: ${{ steps.resolve.outputs.matrix }}
@@ -36,7 +36,7 @@ jobs:
       - name: Resolve target matrix
         id: resolve
         env:
-          REQUESTED_TARGETS: ${{ inputs.targets || 'windows-x64' }}
+          REQUESTED_TARGETS: ${{ inputs.targets || 'linux-x64' }}
           CONFIGURED_TARGETS: ${{ vars.APOSTATE_BUILD_TARGETS }}
         shell: bash
         run: bash scripts/resolve-build-targets.sh >> "$GITHUB_OUTPUT"

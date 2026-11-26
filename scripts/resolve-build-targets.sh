@@ -31,8 +31,8 @@ if not raw:
 # lacks the SDK's Debugging Tools feature and the Visual Studio ATL component,
 # both of which scripts/provision-windows-toolchain.sh installs before the sync.
 runner_labels = {
-    "linux-x64": ["warp-ubuntu-latest-x64-32x"],
-    "linux-arm64": ["warp-ubuntu-latest-x64-32x"],
+    "linux-x64": ["ubicloud-standard-16"],
+    "linux-arm64": ["ubicloud-standard-16"],
     "macos-arm64": ["warp-macos-26-arm64-12x"],
     "windows-x64": ["warp-windows-2025-x64-32x"],
 }

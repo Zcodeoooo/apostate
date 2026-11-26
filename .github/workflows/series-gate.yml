@@ -73,7 +73,7 @@ on:
         description: "Comma-separated targets to gate"
         required: false
         type: string
-        default: "windows-x64"
+        default: "linux-x64"
 
 permissions:
   contents: read
